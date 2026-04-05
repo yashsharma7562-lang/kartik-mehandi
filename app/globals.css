@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-green: #045D56;
+  --forest-green: #023D38;
+  --olive-green: #4B5A3C;
+  --ivory-white: #F9F7F2;
+  --accent-gold: #D4AF37;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans antialiased;
+  background: var(--ivory-white);
+  color: #1a1a1a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-script {
+  font-family: 'Allura', cursive;
+}
+
+a,
+button {
+  @apply transition-all duration-300 ease-out;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+::selection {
+  background: rgba(4, 93, 86, 0.2);
+  color: #045D56;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ivory-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-green);
+  border-radius: 9999px;
+  border: 3px solid var(--ivory-white);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--forest-green);
+}
+
+/* Glassmorphism Classes */
+.glass-header {
+  @apply bg-white/70 backdrop-blur-md border-b border-black/5;
+}
+
+.glass-card {
+  @apply bg-white/40 backdrop-blur-sm border border-white/50 shadow-sm transition-all hover:shadow-xl hover:bg-white/60;
+}
+
+/* Gradient Backgrounds */
+.bg-mehndi-gradient {
+  background: linear-gradient(135deg, #045D56 0%, #023D38 100%);
+}
+
+.bg-ivory-gradient {
+  background: radial-gradient(circle at center, #ffffff 0%, #F9F7F2 100%);
+}
+
+/* Custom Component Styles */
+.nav-link {
+  @apply relative text-sm font-medium tracking-widest text-[#1a1a1a]/80 hover:text-[#045D56] transition-colors uppercase py-2;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-[1px] bg-[#045D56] transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.btn-premium {
+  @apply inline-flex items-center justify-center px-10 py-5 bg-[#045D56] text-white font-serif text-lg tracking-wider transition-all hover:bg-[#023D38] hover:-translate-y-1 shadow-lg active:translate-y-0 active:shadow-md;
+}
+
+.section-title {
+  @apply text-4xl md:text-6xl font-serif text-[#1a1a1a] mb-6 relative inline-block;
+}
+
+.asymmetrical-frame {
+  @apply relative overflow-hidden rounded-tl-[100px] rounded-br-[100px] border border-black/5;
+}

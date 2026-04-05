@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import { MasonryGallery } from '@/components/sections/MasonryGallery';
-import { motion } from 'framer-motion';
 
 export const metadata: Metadata = {
   title: 'Gallery | Kartik Mehndi Artist - Premium Henna Collection',

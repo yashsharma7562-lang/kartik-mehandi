@@ -48,7 +48,7 @@ export default function AtelierPage() {
               At Kartik&apos;s Atelier, we believe that true beauty shouldn&apos;t compromise safety. Our studio is dedicated to the craft of 100% chemical-free, hand-mixed henna.
             </p>
             <div className="p-8 bg-emerald-50 border-l-4 border-emerald-800 italic text-emerald-900 mb-8">
-              "No black henna, no PPD, no shortcuts. Just pure nature and patient artistry."
+              &ldquo;No black henna, no PPD, no shortcuts. Just pure nature and patient artistry.&rdquo;
             </div>
           </div>
           <div className="order-1 lg:order-2 asymmetrical-frame aspect-square bg-emerald-100">

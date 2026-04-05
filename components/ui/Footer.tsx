@@ -14,54 +14,6 @@ function PhoneIcon() {
   );
 }
 
-function MapPinIcon() {
-  return (
-    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M12 21s6-5.27 6-11a6 6 0 1 0-12 0c0 5.73 6 11 6 11Z"
-      />
-      <circle cx="12" cy="10" r="2.5" />
-    </svg>
-  );
-}
-
-function MailIcon() {
-  return (
-    <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M4 6.75h16A1.25 1.25 0 0 1 21.25 8v8A1.25 1.25 0 0 1 20 17.25H4A1.25 1.25 0 0 1 2.75 16V8A1.25 1.25 0 0 1 4 6.75Z"
-      />
-      <path strokeLinecap="round" strokeLinejoin="round" d="m4 8 8 5 8-5" />
-    </svg>
-  );
-}
-
-function SocialIcon({
-  href,
-  label,
-  children,
-}: {
-  href: string;
-  label: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={label}
-      className="flex h-10 w-10 items-center justify-center bg-[#1f1f1f] text-white hover:bg-[#ff321c]"
-    >
-      {children}
-    </a>
-  );
-}
-
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -91,10 +43,10 @@ export function Footer() {
                 {siteConfig.contact.phone}
               </a>
               <a
-                href={`tel:${siteConfig.contact.alternatePhone}`}
+                href={`tel:${siteConfig.contact.secondaryPhone}`}
                 className="mt-2 block text-sm text-white/60 no-underline hover:text-white"
               >
-                {siteConfig.contact.alternatePhone}
+                {siteConfig.contact.secondaryPhone}
               </a>
             </div>
           </div>

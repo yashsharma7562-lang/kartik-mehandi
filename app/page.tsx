@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, CheckCircle2, Instagram } from 'lucide-react';
-import { siteConfig } from '@/data/config';
 
 const highlights = [
   {

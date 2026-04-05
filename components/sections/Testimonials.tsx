@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 
@@ -75,9 +76,11 @@ export function Testimonials() {
               </p>
               
               <div className="flex items-center">
-                <img 
+                <Image 
                   src={testimonial.image} 
                   alt={testimonial.name} 
+                  width={48}
+                  height={48}
                   className="w-12 h-12 rounded-full border-2 border-accent-bronze/50 object-cover"
                 />
                 <div className="ml-4">

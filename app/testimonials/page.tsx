@@ -1,6 +1,5 @@
 'use client';
 
-import { Metadata } from 'next';
 import { Star, Quote, Heart } from 'lucide-react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -108,7 +107,7 @@ export default function TestimonialsPage() {
               <div className="relative">
                 <Quote size={24} className="absolute -top-4 -left-4 text-emerald-100 opacity-50" />
                 <p className="text-slate-600 leading-relaxed italic text-lg relative z-10">
-                  "{t.text}"
+                  &ldquo;{t.text}&rdquo;
                 </p>
               </div>
 

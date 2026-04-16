@@ -35,8 +35,8 @@ export function MasonryGallery() {
               onClick={() => setActiveFilter(cat)}
               className={`px-8 py-3 font-serif text-sm tracking-widest transition-all duration-300 ${
                 activeFilter === cat
-                  ? 'bg-emerald-800 text-white shadow-lg'
-                  : 'bg-emerald-50 text-emerald-900 border border-emerald-100 hover:border-emerald-300'
+                  ? 'bg-maroon text-white shadow-lg'
+                  : 'bg-maroon/5 text-maroon border border-maroon/10 hover:border-maroon/30'
               }`}
             >
               {cat.toUpperCase()}
@@ -58,7 +58,7 @@ export function MasonryGallery() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
-                className={`group relative overflow-hidden rounded-sm bg-emerald-50 ${
+                className={`group relative overflow-hidden rounded-sm bg-maroon/5 ${
                   idx % 3 === 0 ? 'lg:row-span-2 h-[600px]' : 'h-[400px]'
                 }`}
               >
@@ -70,17 +70,17 @@ export function MasonryGallery() {
                 />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-emerald-950/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-maroon/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col justify-end p-8 translate-y-6 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                  <span className="mb-2 inline-block text-[10px] uppercase tracking-[0.3em] text-emerald-300">
+                  <span className="mb-2 inline-block text-[10px] uppercase tracking-[0.3em] text-maroon-light">
                     {item.category}
                   </span>
                   <h3 className="font-serif text-2xl text-white">
                     {item.title}
                   </h3>
-                  <div className="mt-4 h-[1px] w-12 bg-emerald-400 group-hover:w-full transition-all duration-700" />
+                  <div className="mt-4 h-[1px] w-12 bg-maroon-light group-hover:w-full transition-all duration-700" />
                 </div>
               </motion.div>
             ))}

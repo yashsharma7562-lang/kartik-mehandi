@@ -20,11 +20,11 @@ export function Hero() {
   return (
     <section 
       ref={containerRef}
-      className="relative min-h-screen w-full flex items-center bg-dark-900 overflow-hidden"
+      className="relative min-h-screen w-full flex items-center bg-[#1A2F2F] overflow-hidden"
     >
       {/* Background depth and lighting */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(242,227,198,0.03)_0%,transparent_100%)] pointer-events-none" />
-      <div className="absolute top-1/4 left-1/4 w-[800px] h-[800px] bg-accent-gold/5 rounded-full blur-[120px] -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-[800px] h-[800px] bg-maroon/5 rounded-full blur-[120px] -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
       {/* Decorative SVG Pattern Background */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#F2E3C6 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
@@ -42,24 +42,24 @@ export function Hero() {
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-[1px] bg-accent-gold" />
-                <span className="text-accent-gold tracking-[0.2em] text-xs uppercase font-sans">Artisan Mehendi</span>
+                <div className="w-12 h-[1px] bg-maroon" />
+                <span className="text-maroon-light tracking-[0.2em] text-xs uppercase font-sans">Artisan Mehendi</span>
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif text-white leading-[1.1] mb-8 font-light tracking-wide">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif text-[#FDF5E6] leading-[1.1] mb-8 font-light tracking-wide">
                 Exquisite <br />
-                <span className="italic font-serif text-accent-gold/90 mr-2">Bridal</span>
+                <span className="italic font-serif text-maroon-light/90 mr-2">Bridal</span>
                 Mehendi
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-md font-sans font-light leading-relaxed tracking-wide">
+              <p className="text-lg md:text-xl text-[#FDF5E6]/60 mb-12 max-w-md font-sans font-light leading-relaxed tracking-wide">
                 Turning traditions into contemporary art. Celebrate your special day with unique, deeply stained henna designs.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6">
                 <Button
-                  href="/contact"
-                  className="px-8 py-4 bg-transparent border border-accent-gold text-accent-gold hover:bg-accent-gold hover:text-dark-900 transition-all duration-300 uppercase tracking-[0.15em] font-sans font-medium text-xs rounded-none w-max"
+                  href="/contact-us"
+                  className="px-8 py-4 bg-transparent border border-maroon text-maroon-light hover:bg-maroon hover:text-white transition-all duration-300 uppercase tracking-[0.15em] font-sans font-medium text-xs rounded-none w-max"
                 >
                   Book Your Date
                 </Button>
@@ -79,7 +79,7 @@ export function Hero() {
                 transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
               >
                 {/* Thin inner border */}
-                <div className="absolute inset-4 border border-accent-gold/20 z-20 pointer-events-none transition-all duration-500 hover:inset-6" />
+                <div className="absolute inset-4 border border-maroon/20 z-20 pointer-events-none transition-all duration-500 hover:inset-6" />
                 
                 <Image
                   src="/images/hero_bridal_mehendi.png"
@@ -89,8 +89,8 @@ export function Hero() {
                   priority
                   quality={100}
                 />
-                <div className="absolute inset-0 bg-dark-900/10 mix-blend-overlay z-10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-transparent to-transparent z-10" />
+                <div className="absolute inset-0 bg-[#1A2F2F]/10 mix-blend-overlay z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1A2F2F]/80 via-transparent to-transparent z-10" />
               </motion.div>
             </motion.div>
           </div>
@@ -105,10 +105,10 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
       >
-        <span className="text-[10px] uppercase tracking-[0.3em] text-accent-gold/60 [writing-mode:vertical-lr]">Scroll Layout</span>
-        <div className="w-[1px] h-12 bg-accent-gold/20 overflow-hidden">
+        <span className="text-[10px] uppercase tracking-[0.3em] text-maroon-light/60 [writing-mode:vertical-lr]">Scroll Layout</span>
+        <div className="w-[1px] h-12 bg-maroon/20 overflow-hidden">
           <motion.div 
-            className="w-full h-1/2 bg-accent-gold"
+            className="w-full h-1/2 bg-maroon"
             animate={{ y: [0, 48] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
           />

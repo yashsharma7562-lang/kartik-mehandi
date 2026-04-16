@@ -5,11 +5,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --primary-green: #045D56;
-  --forest-green: #023D38;
+  --primary-green: #2F4F4F;
+  --forest-green: #1A2F2F;
   --olive-green: #4B5A3C;
-  --ivory-white: #F9F7F2;
+  --ivory-white: #FDF5E6;
   --accent-gold: #D4AF37;
+  --accent-maroon: #800000;
 }
 
 html {
@@ -19,7 +20,7 @@ html {
 body {
   @apply font-sans antialiased;
   background: var(--ivory-white);
-  color: #1a1a1a;
+  color: var(--primary-green);
 }
 
 h1,
@@ -30,6 +31,7 @@ h5,
 h6 {
   @apply font-serif;
   letter-spacing: -0.02em;
+  color: var(--primary-green);
 }
 
 .font-script {
@@ -48,8 +50,8 @@ img {
 }
 
 ::selection {
-  background: rgba(4, 93, 86, 0.2);
-  color: #045D56;
+  background: rgba(47, 79, 79, 0.2);
+  color: #2F4F4F;
 }
 
 ::-webkit-scrollbar {
@@ -72,30 +74,30 @@ img {
 
 /* Glassmorphism Classes */
 .glass-header {
-  @apply bg-white/70 backdrop-blur-md border-b border-black/5;
+  @apply bg-[#FDF5E6]/90 backdrop-blur-md border-b border-[#2F4F4F]/10;
 }
 
 .glass-card {
-  @apply bg-white/40 backdrop-blur-sm border border-white/50 shadow-sm transition-all hover:shadow-xl hover:bg-white/60;
+  @apply bg-white/60 backdrop-blur-sm border border-[#2F4F4F]/10 shadow-sm transition-all hover:shadow-xl hover:bg-white/80;
 }
 
 /* Gradient Backgrounds */
 .bg-mehndi-gradient {
-  background: linear-gradient(135deg, #045D56 0%, #023D38 100%);
+  background: linear-gradient(135deg, #2F4F4F 0%, #1A2F2F 100%);
 }
 
 .bg-ivory-gradient {
-  background: radial-gradient(circle at center, #ffffff 0%, #F9F7F2 100%);
+  background: radial-gradient(circle at center, #ffffff 0%, #FDF5E6 100%);
 }
 
 /* Custom Component Styles */
 .nav-link {
-  @apply relative text-sm font-medium tracking-widest text-[#1a1a1a]/80 hover:text-[#045D56] transition-colors uppercase py-2;
+  @apply relative text-sm font-medium tracking-widest text-[#2F4F4F]/80 hover:text-[#800000] transition-colors uppercase py-2;
 }
 
 .nav-link::after {
   content: '';
-  @apply absolute bottom-0 left-0 w-0 h-[1px] bg-[#045D56] transition-all duration-300;
+  @apply absolute bottom-0 left-0 w-0 h-[1px] bg-[#800000] transition-all duration-300;
 }
 
 .nav-link:hover::after {
@@ -103,13 +105,13 @@ img {
 }
 
 .btn-premium {
-  @apply inline-flex items-center justify-center px-10 py-5 bg-[#045D56] text-white font-serif text-lg tracking-wider transition-all hover:bg-[#023D38] hover:-translate-y-1 shadow-lg active:translate-y-0 active:shadow-md;
+  @apply inline-flex items-center justify-center px-10 py-5 bg-[#800000] text-white font-serif text-lg tracking-wider transition-all hover:bg-[#5A0000] hover:-translate-y-1 shadow-lg active:translate-y-0 active:shadow-md;
 }
 
 .section-title {
-  @apply text-4xl md:text-6xl font-serif text-[#1a1a1a] mb-6 relative inline-block;
+  @apply text-4xl md:text-6xl font-serif text-[#2F4F4F] mb-6 relative inline-block;
 }
 
 .asymmetrical-frame {
-  @apply relative overflow-hidden rounded-tl-[100px] rounded-br-[100px] border border-black/5;
+  @apply relative overflow-hidden rounded-tl-[100px] rounded-br-[100px] border border-[#2F4F4F]/10;
 }

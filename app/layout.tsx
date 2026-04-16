@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" content={siteConfig.colors.primary} />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body className="flex min-h-screen flex-col bg-[#F9F7F2] text-[#1a1a1a]">
+      <body className="flex min-h-screen flex-col bg-[#FDF5E6] text-[#2F4F4F]">
         <Navbar />
         <main className="flex-1">{children}</main>
         <SiteFooter />

@@ -13,19 +13,32 @@ const config: Config = {
           100: '#FBF8F6',
           200: '#E6E1D3',
           300: '#C7BFA3',
-          400: '#8E9970', // Olive Light
-          500: '#4B5A3C', // Olive Dark
-          600: '#045D56', // Emerald
-          700: '#023D38', // Forest Green
+          400: '#2F4F4F', // Henna Green
+          500: '#2F4F4F', // Henna Green
+          600: '#2F4F4F', // Henna Green
+          700: '#1A2F2F', // Dark Henna
           800: '#012A26',
           900: '#001A18',
+        },
+        henna: {
+          light: '#F4F7F7',
+          DEFAULT: '#2F4F4F',
+          dark: '#1A2F2F',
+        },
+        maroon: {
+          light: '#A52A2A',
+          DEFAULT: '#800000',
+          dark: '#5A0000',
         },
         accent: {
           gold: '#D4AF37',
           bronze: '#A67C00',
-          ivory: '#F9F7F2',
-          forest: '#023D38',
-          emerald: '#045D56',
+          ivory: '#FDF5E6',
+          maroon: '#800000',
+          henna: '#2F4F4F',
+        },
+        background: {
+          beige: '#FDF5E6',
         }
       },
       fontFamily: {

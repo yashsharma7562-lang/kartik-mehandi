@@ -37,7 +37,7 @@ const testimonials = [
 
 const StarRating = ({ rating }: { rating: number }) => {
   return (
-    <div className="flex text-accent-gold mb-4">
+    <div className="flex text-maroon mb-4">
       {[...Array(rating)].map((_, i) => (
         <svg key={i} xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 fill-current" viewBox="0 0 24 24">
           <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
@@ -49,15 +49,16 @@ const StarRating = ({ rating }: { rating: number }) => {
 
 export function Testimonials() {
   return (
-    <section className="bg-dark-900 py-24 relative overflow-hidden">
+    <section className="bg-[#1A2F2F] py-24 relative overflow-hidden">
       {/* Background glow accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-maroon/5 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading 
           title="Client Love" 
           subtitle="Testimonials" 
           description="Read what our brides and clients have to say about their premium mehendi experience."
+          dark={true}
         />
 
         <div className="mt-16 grid gap-8 md:grid-cols-2">
@@ -68,10 +69,10 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
-              className="bg-dark-800 border border-dark-700 p-8 rounded-2xl hover:border-accent-gold/30 hover:shadow-[0_0_25px_rgba(242,227,198,0.1)] transition-all duration-300"
+              className="bg-[#132424] border border-henna/20 p-8 rounded-2xl hover:border-maroon/30 hover:shadow-[0_0_25px_rgba(128,0,0,0.1)] transition-all duration-300"
             >
               <StarRating rating={testimonial.rating} />
-              <p className="font-serif text-lg text-gray-300 leading-relaxed italic mb-8">
+              <p className="font-serif text-lg text-[#FDF5E6]/60 leading-relaxed italic mb-8">
                 &quot;{testimonial.text}&quot;
               </p>
               
@@ -81,11 +82,11 @@ export function Testimonials() {
                   alt={testimonial.name} 
                   width={48}
                   height={48}
-                  className="w-12 h-12 rounded-full border-2 border-accent-bronze/50 object-cover"
+                  className="w-12 h-12 rounded-full border-2 border-maroon/50 object-cover"
                 />
                 <div className="ml-4">
-                  <h4 className="font-bold text-white tracking-wide">{testimonial.name}</h4>
-                  <p className="text-sm text-accent-gold/80">{testimonial.role}</p>
+                  <h4 className="font-bold text-[#FDF5E6] tracking-wide">{testimonial.name}</h4>
+                  <p className="text-sm text-maroon-light/80">{testimonial.role}</p>
                 </div>
               </div>
             </motion.div>

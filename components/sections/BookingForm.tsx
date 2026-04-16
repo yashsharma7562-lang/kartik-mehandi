@@ -66,25 +66,25 @@ Message: ${formData.message}`;
     setTimeout(() => setSubmitted(false), 3000);
   };
 
-  const inputClasses = "w-full px-4 py-4 rounded-none bg-white border border-black/10 text-black placeholder-black/30 focus:border-[#ff321c] focus:ring-0 focus:outline-none transition-all duration-300";
-  const labelClasses = "block text-[11px] font-semibold text-black/50 mb-2 uppercase tracking-[0.25em]";
+  const inputClasses = "w-full px-4 py-4 rounded-none bg-[#FDF5E6]/50 border border-maroon/10 text-henna placeholder-henna/30 focus:border-maroon focus:ring-0 focus:outline-none transition-all duration-300";
+  const labelClasses = "block text-[11px] font-semibold text-henna/50 mb-2 uppercase tracking-[0.25em]";
 
   return (
-    <section className="py-20 bg-[#fffdf9]" id="contact">
+    <section className="py-20 bg-[#FDF5E6]" id="contact">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
-          className="bg-white p-8 md:p-12 rounded-none border border-black/5 shadow-xl"
+          className="bg-[#FDF5E6] p-8 md:p-12 rounded-none border border-maroon/10 shadow-xl"
         >
           {/* Header */}
           <motion.div variants={itemVariants} className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light uppercase tracking-tight text-[#101010] mb-4">
+            <h2 className="text-3xl md:text-4xl font-light uppercase tracking-tight text-henna mb-4">
               Book Your Appointment
             </h2>
-            <p className="text-black/60 font-light leading-relaxed">
+            <p className="text-henna/60 font-light leading-relaxed">
               Submit your inquiry and we&apos;ll be in touch within 24 hours to secure your date.
             </p>
           </motion.div>
@@ -205,13 +205,13 @@ Message: ${formData.message}`;
             <motion.div variants={itemVariants} className="pt-6">
               <Button 
                 type="submit" 
-                className="w-full py-4 tracking-[0.3em] font-semibold text-[11px] uppercase rounded-none bg-[#ff321c] text-white hover:bg-[#e12a17]"
+                className="w-full py-4 tracking-[0.3em] font-semibold text-[11px] uppercase rounded-none bg-maroon text-white hover:bg-maroon-dark"
               >
                 {submitted ? '✓ Request Sent Successfully' : 'Submit Inquiry'}
               </Button>
             </motion.div>
 
-            <p className="text-[11px] text-black/40 text-center pt-2 font-medium tracking-wide uppercase">
+            <p className="text-[11px] text-henna/40 text-center pt-2 font-medium tracking-wide uppercase">
               Your inquiry is routed directly to WhatsApp for an immediate response.
             </p>
           </motion.form>
@@ -219,21 +219,21 @@ Message: ${formData.message}`;
           {/* Contact Info Cards */}
           <motion.div
             variants={itemVariants}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16 pt-12 border-t border-black/5"
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16 pt-12 border-t border-maroon/10"
           >
-            <a href={`tel:${siteConfig.contact.phone}`} className="text-center p-6 bg-[#fffdf9] border border-black/5 hover:border-[#ff321c]/20 rounded-none group transition-colors">
+            <a href={`tel:${siteConfig.contact.phone}`} className="text-center p-6 bg-[#FDF5E6] border border-maroon/10 hover:border-maroon/20 rounded-none group transition-colors">
               <p className="text-2xl mb-3">📞</p>
-              <p className="text-[#ff321c] text-xs font-semibold tracking-wider font-sans">{siteConfig.contact.phone}</p>
+              <p className="text-maroon text-xs font-semibold tracking-wider font-sans">{siteConfig.contact.phone}</p>
             </a>
 
-            <a href={`mailto:${siteConfig.contact.email}`} className="text-center p-6 bg-[#fffdf9] border border-black/5 hover:border-[#ff321c]/20 rounded-none group transition-colors">
+            <a href={`mailto:${siteConfig.contact.email}`} className="text-center p-6 bg-[#FDF5E6] border border-maroon/10 hover:border-maroon/20 rounded-none group transition-colors">
               <p className="text-2xl mb-3">📧</p>
-              <p className="text-[#ff321c] text-xs font-semibold tracking-wider font-sans">{siteConfig.contact.email}</p>
+              <p className="text-maroon text-xs font-semibold tracking-wider font-sans">{siteConfig.contact.email}</p>
             </a>
 
-            <a href={siteConfig.social.whatsapp} target="_blank" rel="noopener noreferrer" className="text-center p-6 bg-[#fffdf9] border border-black/5 hover:border-[#ff321c]/20 rounded-none group transition-colors">
+            <a href={siteConfig.social.whatsapp} target="_blank" rel="noopener noreferrer" className="text-center p-6 bg-[#FDF5E6] border border-maroon/10 hover:border-maroon/20 rounded-none group transition-colors">
               <p className="text-2xl mb-3">💬</p>
-              <p className="text-[#ff321c] text-xs font-semibold tracking-wider font-sans uppercase">WhatsApp Us</p>
+              <p className="text-maroon text-xs font-semibold tracking-wider font-sans uppercase">WhatsApp Us</p>
             </a>
           </motion.div>
         </motion.div>

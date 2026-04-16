@@ -19,12 +19,12 @@ interface ButtonProps extends MotionProps {
 
 const variantStyles = {
   primary:
-    'bg-accent-gold text-dark-900 hover:bg-[#FFF] hover:animate-glow shadow-lg',
+    'bg-maroon text-white hover:bg-maroon-dark shadow-lg',
   secondary:
-    'bg-dark-800 text-accent-gold border border-accent-bronze hover:border-transparent hover:animate-glow shadow-md',
+    'bg-[#132424] text-maroon-light border border-maroon-light/30 hover:border-transparent shadow-md',
   outline:
-    'border-2 border-accent-gold text-accent-gold hover:bg-dark-800 hover:animate-glow',
-  ghost: 'text-accent-gold hover:bg-dark-800',
+    'border-2 border-maroon text-maroon hover:bg-maroon/5',
+  ghost: 'text-maroon hover:bg-maroon/5',
 };
 
 const sizeStyles = {

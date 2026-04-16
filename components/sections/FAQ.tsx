@@ -27,26 +27,27 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-dark-900 py-20 border-t border-dark-800">
+    <section className="bg-[#1A2F2F] py-20 border-t border-henna/20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading 
           title="Frequently Asked Questions" 
           subtitle="Answers to common queries"
           centered={true}
+          dark={true}
         />
         
         <div className="mt-12 space-y-4">
           {faqs.map((faq, index) => (
             <div 
               key={index} 
-              className="border border-dark-700 rounded-lg bg-dark-800 overflow-hidden hover:border-accent-gold/50 transition-colors duration-300"
+              className="border border-henna/10 rounded-lg bg-[#132424] overflow-hidden hover:border-maroon/50 transition-colors duration-300"
             >
               <button
                 className="w-full text-left px-6 py-5 focus:outline-none flex justify-between items-center"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="font-serif text-lg text-white">{faq.question}</span>
-                <span className="text-accent-gold ml-4 text-2xl">
+                <span className="font-serif text-lg text-[#FDF5E6]">{faq.question}</span>
+                <span className="text-maroon-light ml-4 text-2xl">
                   {openIndex === index ? '−' : '+'}
                 </span>
               </button>
@@ -59,7 +60,7 @@ export function FAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                   >
-                    <div className="px-6 pb-5 text-gray-400">
+                    <div className="px-6 pb-5 text-[#FDF5E6]/60">
                       {faq.answer}
                     </div>
                   </motion.div>

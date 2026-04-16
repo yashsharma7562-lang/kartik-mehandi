@@ -26,9 +26,9 @@ const services = [
 
 export function ServicesOverview() {
   return (
-    <section className="py-40 bg-dark-900 relative overflow-hidden">
+    <section className="py-40 bg-[#1A2F2F] relative overflow-hidden">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-accent-gold/5 rounded-full blur-[120px] -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+      <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-maroon/5 rounded-full blur-[120px] -translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
         <div className="flex flex-col flex-start mb-32">
@@ -40,10 +40,10 @@ export function ServicesOverview() {
             className="flex flex-col items-start max-w-2xl"
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-[1px] bg-accent-gold" />
-              <span className="text-accent-gold tracking-[0.2em] text-[10px] uppercase font-sans">Our Expertise</span>
+              <div className="w-12 h-[1px] bg-maroon" />
+              <span className="text-maroon-light tracking-[0.2em] text-[10px] uppercase font-sans">Our Expertise</span>
             </div>
-            <h2 className="text-5xl md:text-6xl font-serif text-white font-light mb-8 leading-tight">The Artistry</h2>
+            <h2 className="text-5xl md:text-6xl font-serif text-[#FDF5E6] font-light mb-8 leading-tight">The Artistry</h2>
           </motion.div>
         </div>
 
@@ -61,15 +61,15 @@ export function ServicesOverview() {
                   transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                   className="relative aspect-[4/5] w-[90%] md:w-[75%] group mx-auto"
                 >
-                  <div className={`absolute -inset-6 border border-accent-gold/20 z-0 transition-transform duration-1000 group-hover:scale-[0.98] ${service.align === 'right' ? '-translate-x-4 translate-y-4' : 'translate-x-4 -translate-y-4'}`} />
-                  <div className="relative h-full w-full bg-dark-800 z-10 overflow-hidden shadow-2xl">
+                  <div className={`absolute -inset-6 border border-maroon/20 z-0 transition-transform duration-1000 group-hover:scale-[0.98] ${service.align === 'right' ? '-translate-x-4 translate-y-4' : 'translate-x-4 -translate-y-4'}`} />
+                  <div className="relative h-full w-full bg-[#132424] z-10 overflow-hidden shadow-2xl">
                     <Image
                       src={service.image}
                       alt={service.title}
                       fill
                       className="object-cover opacity-90 transition-all duration-[15s] group-hover:scale-110 group-hover:opacity-100"
                     />
-                    <div className="absolute inset-0 bg-dark-900/10 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                    <div className="absolute inset-0 bg-[#1A2F2F]/10 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                   </div>
                 </motion.div>
               </div>
@@ -83,16 +83,16 @@ export function ServicesOverview() {
                   className="max-w-md"
                 >
                   <div className="flex items-center gap-4 mb-8">
-                    <div className="w-8 h-[1px] bg-accent-gold/50" />
-                    <span className="text-accent-gold/50 tracking-[0.2em] text-[10px] uppercase font-sans">0{index + 1}</span>
+                    <div className="w-8 h-[1px] bg-maroon-light/50" />
+                    <span className="text-maroon-light/50 tracking-[0.2em] text-[10px] uppercase font-sans">0{index + 1}</span>
                   </div>
-                  <h3 className="text-4xl md:text-5xl font-serif text-white mb-8 font-light leading-snug">
+                  <h3 className="text-4xl md:text-5xl font-serif text-[#FDF5E6] mb-8 font-light leading-snug">
                     {service.title}
                   </h3>
-                  <p className="text-lg text-gray-400 font-sans font-light leading-relaxed tracking-wide">
+                  <p className="text-lg text-[#FDF5E6]/60 font-sans font-light leading-relaxed tracking-wide">
                     {service.description}
                   </p>
-                  <a href={`/services`} className="mt-12 inline-block text-accent-gold uppercase tracking-[0.15em] text-xs font-sans hover:text-white transition-colors duration-300 pb-2 border-b border-accent-gold/30 hover:border-white">
+                  <a href={`/services`} className="mt-12 inline-block text-maroon-light uppercase tracking-[0.15em] text-xs font-sans hover:text-[#FDF5E6] transition-colors duration-300 pb-2 border-b border-maroon-light/30 hover:border-[#FDF5E6]">
                     Discover More
                   </a>
                 </motion.div>
